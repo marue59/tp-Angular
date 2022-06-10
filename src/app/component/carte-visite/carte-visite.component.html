@@ -1,0 +1,37 @@
+<div *ngFor="let user of users; let i = even">
+  <li *ngIf="!i">
+    <div class="background">
+      <div class="card-hearder">
+        {{user.id}}
+        {{user.company.name}}
+        <div class="card">
+          <div class="name">
+            {{user.name}} {{user.username}}
+          </div>
+          <div class="info">
+            <p>Site : {{user.website}}</p>
+            <p>Email : {{user.email}}</p>
+            <p>Telephone : {{user.phone}}</p>
+            <button (click)="toggle()">Modifier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div [hidden] = "hidden">
+      <div class="forms">
+        <h4>Entreprise : </h4>
+        <input type="text" name="compagny-label" [(ngModel)]="user.company.name">
+        <h4>Nom  : </h4>
+        <input type="text" name="compagny-label" [(ngModel)]="user.name">
+        <h4>Prénom  : </h4>
+        <input type="text" name="compagny-label" [(ngModel)]="user.username">
+        <h4>Site  : </h4>
+        <input type="text" name="compagny-label" [(ngModel)]="user.website">
+        <h4>Email  : </h4>
+        <input type="text" name="compagny-label" [(ngModel)]="user.email">
+        <h4>Télephone  : </h4>
+        <input type="text" name="compagny-label" [(ngModel)]="user.phone">
+      </div>
+    </div>
+  </li>
+</div>
