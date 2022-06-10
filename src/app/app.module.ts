@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarteVisiteComponent } from './component/carte-visite/carte-visite.component';
 import { ShowDateComponent } from './component/show-date/show-date.component';
+import { GenericAlertButtonComponent } from './component/generic-alert-button/generic-alert-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarteVisiteComponent,
-    ShowDateComponent
+    ShowDateComponent,
+    GenericAlertButtonComponent
   ],
   imports: [
     BrowserModule,
